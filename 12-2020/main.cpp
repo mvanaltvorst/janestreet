@@ -279,19 +279,15 @@ outer:
                         if (!checkColumnStrong(j)) return false;
                         if (!checkNV(j)) return false;
                         if (!checkSV(j)) return false;
-                        if (!checkNVWeak()) return false;
-                        if (!checkEVWeak()) return false;
-                        if (!checkSVWeak()) return false;
-                        if (!checkWVWeak()) return false;
                     } else {
                         if (!checkRowStrong(i)) return false;
                         if (!checkEV(i)) return false;
                         if (!checkWV(i)) return false;
-                        if (!checkNVWeak()) return false;
-                        if (!checkEVWeak()) return false;
-                        if (!checkSVWeak()) return false;
-                        if (!checkWVWeak()) return false;
                     }
+                    if (!checkNVWeak()) return false;
+                    if (!checkEVWeak()) return false;
+                    if (!checkSVWeak()) return false;
+                    if (!checkWVWeak()) return false;
                     if (!checkConnectedness()) return false;
                 }
                 int oldi = i, oldj = j;
